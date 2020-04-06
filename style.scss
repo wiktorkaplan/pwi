@@ -1,0 +1,376 @@
+$bodyFont: 'Source Sans Pro',
+Helvetica,
+sans-serif;
+$bgColor: #d7edf3;
+$fontColor: #828181;
+$fontTitleColor: #404040;
+$bfontSize: 16px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transform($translate-value) {
+  -webkit-transform: $translate-value;
+  -o-transform: $translate-value;
+  -moz-transform: $translate-value;
+  -ms-transform: $translate-value;
+  transform: $translate-value;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -o-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: $bgColor;
+  font-family: $bodyFont;
+  font-size: $bfontSize;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+  color: black;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    text-decoration: none;
+    outline: 0;
+    color: black;
+  }
+}
+
+.container {
+  display: flex;
+  max-width: 64em;
+  min-width: 180px;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  .left {
+    width: 100%;
+    margin-left: 5px;
+    padding: 0 1% 10% 0;
+    text-align: left;
+  }
+
+
+  .right {
+    width: 100%;
+    margin-right: 5px;
+  }
+}
+
+.button {
+  margin-bottom: 10px;
+  padding: 32px 35px;
+  background: #FFFFFF;
+  @include border-radius(5px);
+  @include transition(.5s);
+  cursor: pointer;
+
+  h3 {
+
+    font-size: 20px;
+    color: $fontTitleColor;
+    margin-bottom: 18px;
+    @include transition(.5s);
+  }
+
+  p {
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 28px;
+    color: $fontColor;
+    @include transition(.5s);
+  }
+
+  &:hover {
+    @include transform(scaleX(1.05));
+    background: linear-gradient(to right bottom, #007ae1, #008fe8, #00a2e9, #00b3e6, #00c3e1);
+
+    h3 {
+      color: #FFFFFF;
+    }
+
+
+    p {
+      color: #FFFFFF;
+    }
+  }
+
+}
+
+#header {
+  width: 100%;
+  height: 100%;
+
+  .container {
+    .left {
+      h1 {
+        font-size: 30px;
+        color: $fontTitleColor;
+        padding: 0 0 10px 0;
+      }
+
+      p {
+        padding: 0 0 3px 0;
+        color: $fontColor;
+        margin: 0;
+      }
+    }
+  }
+}
+
+#tictoe {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+  .container {
+    .left {
+      
+      .endgame {
+        margin: 0 20px 0 0;
+        padding: 40px 10px;
+        background: white;
+        @include border-radius(5px);
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .selectSym {
+        margin: 0 20px 0 0;
+        padding: 10px;
+        background: white;
+        @include border-radius(5px);
+        font-size: 20px;
+        text-align: center;
+
+        #select {
+          color: black;
+        }
+
+        button {
+          font-size: 60px;
+          margin: 15px 10px 0 10px;
+          width: 70px;
+          background: black;
+          color: white;
+        }
+      }
+
+      .buttontic {
+        margin: 5px 20px 0 0;
+        padding: 10px;
+        font-size: 20px;
+        background: #FFFFFF;
+        @include border-radius(5px);
+        @include transition(.5s);
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+          background: black;
+          color: white;
+        }
+      }
+    }
+
+    .right {
+      padding: 0 0 0 20px;
+
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 4px solid #fff;
+        height: 150px;
+        width: 150px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: Helvetica, sans-serif;
+        font-size: 90px;
+        color: white;
+        cursor: pointer;
+      }
+
+      table tr:first-child td {
+        border-top: 0;
+      }
+
+      table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      table tr td:first-child {
+        border-left: 0;
+      }
+
+      table tr td:last-child {
+        border-right: 0;
+      }
+
+    }
+  }
+}
+
+#footer {
+  height: 100%;
+  width: 100%;
+
+  .container {
+    .left {
+      padding: 0 10% 0 0;
+
+      h1 {
+        font-size: 30px;
+        color: $fontTitleColor;
+        padding: 0 0 10px 0;
+      }
+
+      p {
+        padding: 0 0 3px 0;
+        color: $fontColor;
+        margin: 0;
+      }
+    }
+  }
+}
+
+//RESPONSYWNOŚĆ
+@media screen and (max-width:1250px) {
+  #tictoe {
+    height: 100%;
+  width: 100%;
+  background-color: black;
+    .container{
+    .right{
+      td {
+        height:80px;
+        width: 80px;
+        font-size: 40px;
+      }
+    }}
+  }
+}
+
+@media screen and (max-width:640px) {
+
+  #tictoe {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    .container {
+      flex-direction: column;
+      justify-content: start;
+
+      .left {
+        text-align: center;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        .endgame {
+          margin: 20px 20px;
+        }
+
+        .selectSym {
+          margin: 20px 20px;
+        }
+
+        .buttontic {
+          margin: 20px 20px;
+        }
+      }
+
+      .right {
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+        margin: 0 auto;
+
+        table {
+          text-align: center;
+        }
+
+        td {
+          height: 80px;
+          width: 80px;
+          font-size: 40px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  #header {
+    min-width: 250px;
+
+    .container {
+      flex-direction: column;
+      justify-content: start;
+
+      .left {
+        text-align: center;
+        margin: 0;
+        padding: 40px 0;
+      }
+
+      .right {
+        height: 100%;
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #footer {
+    min-width: 250px;
+
+    .container {
+      flex-direction: column;
+      justify-content: start;
+      min-width: 200px;
+
+      .left {
+        text-align: center;
+        margin: 0;
+        padding: 40px 0;
+      }
+
+      .right {
+        height: 100%;
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+}

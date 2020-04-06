@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #d7edf3;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+  color: black;
+}
+
+a:hover, a:active, a:focus, a:visited {
+  text-decoration: none;
+  outline: 0;
+  color: black;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 64em;
+  min-width: 180px;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .left {
+  width: 100%;
+  margin-left: 5px;
+  padding: 0 1% 10% 0;
+  text-align: left;
+}
+
+.container .right {
+  width: 100%;
+  margin-right: 5px;
+}
+
+.button {
+  margin-bottom: 10px;
+  padding: 32px 35px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button h3 {
+  font-size: 20px;
+  color: #404040;
+  margin-bottom: 18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #828181;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button:hover {
+  -webkit-transform: scaleX(1.05);
+  transform: scaleX(1.05);
+  background: -webkit-gradient(linear, left top, right bottom, from(#007ae1), color-stop(#008fe8), color-stop(#00a2e9), color-stop(#00b3e6), to(#00c3e1));
+  background: linear-gradient(to right bottom, #007ae1, #008fe8, #00a2e9, #00b3e6, #00c3e1);
+}
+
+.button:hover h3 {
+  color: #FFFFFF;
+}
+
+.button:hover p {
+  color: #FFFFFF;
+}
+
+#header {
+  width: 100%;
+  height: 100%;
+}
+
+#header .container .left h1 {
+  font-size: 30px;
+  color: #404040;
+  padding: 0 0 10px 0;
+}
+
+#header .container .left p {
+  padding: 0 0 3px 0;
+  color: #828181;
+  margin: 0;
+}
+
+#tictoe {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#tictoe .container .left .endgame {
+  margin: 0 20px 0 0;
+  padding: 40px 10px;
+  background: white;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#tictoe .container .left .selectSym {
+  margin: 0 20px 0 0;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#tictoe .container .left .selectSym #select {
+  color: black;
+}
+
+#tictoe .container .left .selectSym button {
+  font-size: 60px;
+  margin: 15px 10px 0 10px;
+  width: 70px;
+  background: black;
+  color: white;
+}
+
+#tictoe .container .left .buttontic {
+  margin: 5px 20px 0 0;
+  padding: 10px;
+  font-size: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+}
+
+#tictoe .container .left .buttontic:hover {
+  background: black;
+  color: white;
+}
+
+#tictoe .container .right {
+  padding: 0 0 0 20px;
+}
+
+#tictoe .container .right table {
+  border-collapse: collapse;
+}
+
+#tictoe .container .right td {
+  border: 4px solid #fff;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Helvetica, sans-serif;
+  font-size: 90px;
+  color: white;
+  cursor: pointer;
+}
+
+#tictoe .container .right table tr:first-child td {
+  border-top: 0;
+}
+
+#tictoe .container .right table tr:last-child td {
+  border-bottom: 0;
+}
+
+#tictoe .container .right table tr td:first-child {
+  border-left: 0;
+}
+
+#tictoe .container .right table tr td:last-child {
+  border-right: 0;
+}
+
+#footer {
+  height: 100%;
+  width: 100%;
+}
+
+#footer .container .left {
+  padding: 0 10% 0 0;
+}
+
+#footer .container .left h1 {
+  font-size: 30px;
+  color: #404040;
+  padding: 0 0 10px 0;
+}
+
+#footer .container .left p {
+  padding: 0 0 3px 0;
+  color: #828181;
+  margin: 0;
+}
+
+@media screen and (max-width: 1250px) {
+  #tictoe {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+  #tictoe .container .right td {
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #tictoe {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+  #tictoe .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #tictoe .container .left {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  #tictoe .container .left .endgame {
+    margin: 20px 20px;
+  }
+  #tictoe .container .left .selectSym {
+    margin: 20px 20px;
+  }
+  #tictoe .container .left .buttontic {
+    margin: 20px 20px;
+  }
+  #tictoe .container .right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+  #tictoe .container .right table {
+    text-align: center;
+  }
+  #tictoe .container .right td {
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    min-width: 250px;
+  }
+  #header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #header .container .left {
+    text-align: center;
+    margin: 0;
+    padding: 40px 0;
+  }
+  #header .container .right {
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+  }
+  #footer {
+    min-width: 250px;
+  }
+  #footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    min-width: 200px;
+  }
+  #footer .container .left {
+    text-align: center;
+    margin: 0;
+    padding: 40px 0;
+  }
+  #footer .container .right {
+    height: 100%;
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

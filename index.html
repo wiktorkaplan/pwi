@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+  <title>Programowanie w Internecie | Wiktor Kapłan</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
+  <link rel='icon' href='favicon.ico' type='image/x-icon' />
+</head>
+
+<body onload="showHeader()">
+
+  <section id="header">
+    <div class="container">
+      <div class="left">
+        <h1>Programowanie w Internecie</h1>
+        <p>Cotygodniowe projekty zaliczeniowe.</p>
+        <p>Wiktor Kapłan | 185090</p>
+      </div>
+      <div class="right">
+          <div class="button" onclick="showTictoe()">
+            <h3>Zadanie 1 - Kółko i Krzyżyk</h3>
+            <p>Kółko i krzyżyk z wykorzystaniem JavaScript i AI.</p>
+          </div>
+        <a href="/style.scss">
+        <div class="button">
+          <h3>Zadanie 2 - SASS</h3>
+          <p>Wykorzystanie SASS do generowania pliku CSS.</p>
+          <p>(Kliknij, aby zobaczyć plik .scss)</p>
+        </div>
+        </a>
+        <div class="button" onclick="showFooter()">
+          <h3>Zadanie 3 - Responsywność i SPA</h3>
+          <p>Responsywność + Single Page Aplication</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tictoe">
+    <div class="container">
+      <div class="left">
+        <div class="endgame">
+          <div class="text"></div>
+        </div>
+          <div class="selectSym" >
+            <p id="select">WYBIERZ KIM CHCESZ ZAGRAĆ:</p>
+              <button onClick="selectSym('X')">X</button>
+              <button onClick="selectSym('O')">O</button>
+          </div>
+          <div class="buttontic" onClick="startGame()">
+            <h4>ZAGRAJ PONOWNIE</h4>
+          </div>
+          <div class="buttontic" onclick="showHeader()">
+            <h4>POWRÓT DO STRONY GŁÓWNEJ</h4>
+          </div>
+      </div>
+
+      <div class="right">
+        <table>
+          <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+          </tr>
+          <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+          </tr>
+          <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container">
+      <div class="left">
+        <h1>Single Page Application</h1>
+        <p>Nazwa nie mająca swojego tłumaczenia w języku polskim. Oznacza dosłownie jedno-stronną aplikację internetową, czyli taką, która posiada tylko jeden plik html. Taka aplikacja nie przeładowuje strony w trakcie użytkowania. Może w tym celu korzystać z technologii AJAX lub innych dostępnych w przeglądarkach internetowych. Logika aplikacji SPA napisana jest w JavaScript lub w języku transpilowanym do języka JavaScript np. JSX, TypeScript, CoffeeScript czy najnowsze wersje JavaScript transpilowane za pomocą narzędzia Babel. <i>Wikipedia</i> </p>
+      </div>
+      <div class="right">
+          <div class="button" onclick="showHeader()">
+            <h3>Home</h3>
+            <p>Kliknij, aby wrócić na stronę główną.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
