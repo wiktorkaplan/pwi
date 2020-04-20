@@ -295,6 +295,18 @@ button::-moz-focus-inner {
 }
 
 @media screen and (max-width: 1250px) {
+  #formularz {
+    height: 100%;
+    width: 100%;
+  }
+  #formularz .container .left {
+    padding: 0px;
+    margin: 0 10px 0 0;
+  }
+  #formularz .container .right {
+    padding: 0px;
+    margin: 0 10px 0 0;
+  }
   #tictoe {
     height: 100%;
     width: 100%;
@@ -308,6 +320,29 @@ button::-moz-focus-inner {
 }
 
 @media screen and (max-width: 640px) {
+  #formularz {
+    min-width: 250px;
+  }
+  #formularz .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #formularz .container .left {
+    text-align: center;
+    margin: 0;
+    padding: 40px 0;
+  }
+  #formularz .container .right {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+  }
   #tictoe {
     height: 100%;
     width: 100%;
