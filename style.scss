@@ -60,14 +60,15 @@ a {
     color: black;
   }
 }
+
 [role="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-    -webkit-box-sizing: content-box;
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 /* Reset `button` and button-style `input` default styles */
@@ -75,24 +76,28 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-    background: none;
-    border: 0;
-    color: inherit;
-    /* cursor: default; */
-    font: inherit;
-    line-height: normal;
-    overflow: visible;
-    padding: 0;
-    -webkit-appearance: button; /* for input */
-    -webkit-user-select: none; /* for button */
-       -moz-user-select: none;
-        -ms-user-select: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  /* for input */
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
+
 input::-moz-focus-inner,
 button::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
+
 .container {
   display: flex;
   max-width: 64em;
@@ -279,16 +284,19 @@ button::-moz-focus-inner {
     .left {
       padding: 0px;
       margin: 0 40px 0 0;
+
       .inpFormularz {
         text-align: left;
         background: white;
         padding: 30px 50px 30px 40px;
         @include border-radius(5px);
-        .form-row{
+
+        .form-row {
           display: block;
           margin: 0 0 10px 0;
         }
-        & input{
+
+        & input {
           width: 100%;
           display: block;
           padding: 10px 0 10px 10px;
@@ -296,13 +304,15 @@ button::-moz-focus-inner {
           @include border-radius(5px);
           color: #666;
           font-family: sans-serif;
-          
+
         }
       }
     }
+
     .right {
       padding: 0px;
       margin: 0 0 0 40px;
+
       .buttontic {
         width: 100%;
         margin: 5px 20px 0 0;
@@ -325,6 +335,23 @@ button::-moz-focus-inner {
 
 //RESPONSYWNOŚĆ
 @media screen and (max-width:1250px) {
+  #formularz {
+    height: 100%;
+    width: 100%;
+
+    .container {
+      .left {
+        padding: 0px;
+        margin: 0 10px 0 0;
+      }
+
+      .right {
+        padding: 0px;
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
   #tictoe {
     height: 100%;
     width: 100%;
@@ -343,6 +370,27 @@ button::-moz-focus-inner {
 }
 
 @media screen and (max-width:640px) {
+  #formularz {
+    min-width: 250px;
+
+    .container {
+      flex-direction: column;
+      justify-content: start;
+
+      .left {
+        text-align: center;
+        margin: 0;
+        padding: 40px 0;
+      }
+
+      .right {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+      }
+    }
+  }
 
   #tictoe {
     height: 100%;
@@ -390,6 +438,7 @@ button::-moz-focus-inner {
       }
     }
   }
+
 }
 
 @media screen and (max-width:480px) {
@@ -413,5 +462,6 @@ button::-moz-focus-inner {
       }
     }
   }
+
 
 }
