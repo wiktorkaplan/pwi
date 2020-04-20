@@ -26,6 +26,42 @@ a:hover, a:active, a:focus, a:visited {
   color: black;
 }
 
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  /* for input */
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,25 +239,59 @@ a:hover, a:active, a:focus, a:visited {
   border-right: 0;
 }
 
-#footer {
+#formularz {
   height: 100%;
   width: 100%;
 }
 
-#footer .container .left {
-  padding: 0 10% 0 0;
+#formularz .container .left {
+  padding: 0px;
+  margin: 0 40px 0 0;
 }
 
-#footer .container .left h1 {
-  font-size: 30px;
-  color: #404040;
-  padding: 0 0 10px 0;
+#formularz .container .left .inpFormularz {
+  text-align: left;
+  background: white;
+  padding: 30px 50px 30px 40px;
+  border-radius: 5px;
 }
 
-#footer .container .left p {
-  padding: 0 0 3px 0;
-  color: #828181;
-  margin: 0;
+#formularz .container .left .inpFormularz .form-row {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+#formularz .container .left .inpFormularz input {
+  width: 100%;
+  display: block;
+  padding: 10px 0 10px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  color: #666;
+  font-family: sans-serif;
+}
+
+#formularz .container .right {
+  padding: 0px;
+  margin: 0 0 0 40px;
+}
+
+#formularz .container .right .buttontic {
+  width: 100%;
+  margin: 5px 20px 0 0;
+  padding: 10px;
+  font-size: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+}
+
+#formularz .container .right .buttontic:hover {
+  background: black;
+  color: white;
 }
 
 @media screen and (max-width: 1250px) {
@@ -307,30 +377,6 @@ a:hover, a:active, a:focus, a:visited {
   #header .container .right {
     height: 100%;
     width: 95%;
-    margin: 0 auto;
-  }
-  #footer {
-    min-width: 250px;
-  }
-  #footer .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    min-width: 200px;
-  }
-  #footer .container .left {
-    text-align: center;
-    margin: 0;
-    padding: 40px 0;
-  }
-  #footer .container .right {
-    height: 100%;
-    width: 95%;
-    text-align: center;
     margin: 0 auto;
   }
 }
