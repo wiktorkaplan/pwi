@@ -1,17 +1,17 @@
 function showHeader(){
   document.getElementById("header").style.display="block";
   document.getElementById("tictoe").style.display="none";
-  document.getElementById("footer").style.display="none";
+  document.getElementById("formularz").style.display="none";
 }
 function showTictoe(){
   document.getElementById("header").style.display="none";
   document.getElementById("tictoe").style.display="block";
-  document.getElementById("footer").style.display="none";
+  document.getElementById("formularz").style.display="none";
 }
-function showFooter(){
+function showFormularz(){
   document.getElementById("header").style.display="none";
   document.getElementById("tictoe").style.display="none";
-  document.getElementById("footer").style.display="block";
+  document.getElementById("formularz").style.display="block";
 }
 
 /////////START TIC TOE
